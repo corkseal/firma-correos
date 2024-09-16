@@ -1,94 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorkSeal</title>
     <style>
-        body { margin: 0; padding: 0; }
-        html { height: 100%; cursor: default; }
         body {
-            font-family: "Roboto", sans-serif; /* Default font */
-            width: 100%; height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
             text-align: center;
-            display: table;
-            opacity: 1;
-            animation: fadein 3s forwards;
         }
-        h2 {
-            font-weight: 300;
-            margin-bottom: 25px;
-        }
-        img {
-            width: 25%; /* Image width */
-            border: 0; /* For IE */
-            /* Aspect ratio of image, gives initial dimension to prevent text moving down once image is loaded */
-            /* When changing logo, change this also */
-            aspect-ratio: 125 / 50;
-        }
-        #main {
-            vertical-align: middle;
-            display: table-cell;
-        }
-        /* Progress bar */
-        #progress {
-            width: 45%; /* Bar width */
-            margin: 0 auto;
-            border-radius: 10px; /* Roundness */
-            background-color: #a8a8a8; /* Background colour */
-            padding: 7px 5px;
-            /* border: 5px solid #a8a8a8; Border */
-        }
-        #fill {
-            padding: 2px 0;
-            background-color: #00b98b; /* Fill colour */
-            width: 35%; /* Bar percentage, change text below also */
-            border-radius: 25px; /* Roundness */
-            animation: proanimate 2s;
-        }
-        #barpercent h3 {
-            color: white; /* Bar percentage text colour */
-            margin: 0; padding: 0;
-            opacity: 1;
-            animation: fadein 3s forwards;
-        }
-
-        /* Fades in animation */
-        @keyframes fadein  {
-            from { opacity: 0; }
-        }
-        /* Animates bar on page load */
-        @keyframes proanimate {
-            from { width: 0%; }
-        }
-
-        @media screen and (max-width:600px) {
-            img {
-                width: 60%;
-            }
-            h1 {
-                font-size: 1.3em;
-            }
-            h2 {
-                margin: 1.1em;
-                font-size: 1.1em;
-            }
-            #progress {
-                width: 80%; /* Bar width */
-            }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
         }
     </style>
-    <title>Próximamente...</title>
 </head>
 <body>
-    <div id="main">
-        <!--<img src="logo.png" alt="Logo Image">-->
-        <h1>CORKSEAL</h1>
-        <h2>Nuestro sitio web está en construcción. </h2>
-        <a href="mailto:info@corkandseal.com">info@corkandseal.com</a>
-        <br><br>
-        <div id="progress"><div id="fill"><div id="barpercent"><h3>35%</h3></div></div></div>
+    <div class="container">
+        <h1>Bienvenido a tu página personal</h1>
+        <p>Haz clic en el botón para continuar a tu perfil.</p>
+        <button onclick="redirigir()">Ir a mi página</button>
     </div>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <script>
+        function redirigir() {
+            // Obtener la URL de la página actual
+            let currentURL = window.location.href;
+            
+            // Redirigir a la página personal del usuario (ajusta esta lógica según tu necesidad)
+            if (currentURL.includes('edgar')) {
+                window.location.href = 'usuarios/edgar-quirante.html';
+            } else if (currentURL.includes('salva')) {
+                window.location.href = 'usuarios/salva-alvarez.html';
+            } else if (currentURL.includes('arnau')) {
+                window.location.href = 'usuarios/arnau-alvarez.html';
+            } else if (currentURL.includes('mariano)) {
+                window.location.href = 'usuarios/mariano-lorenzo.html';
+            } else {
+                alert('Usuario no encontrado');
+            }
+        }
+    </script>
 </body>
 </html>
