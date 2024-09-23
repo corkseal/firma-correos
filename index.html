@@ -1,93 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instrucciones de Firma - Outlook</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7DB3W6t3g/WTk9mqF9WT6EfZzBn5j3X6AK/" crossorigin="anonymous">
-    
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            max-width: 800px;
-            margin-top: 50px;
-        }
-        .btn-custom {
-            background-color: #007bff;
-            color: white;
-        }
-    </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="iconoWeb.png" type="image/x-icon">
+    <title>CorkSeal • Firmas de Correo</title>
 </head>
 <body>
-
-<div class="container">
-    <div class="text-center mb-4">
-        <h1 class="display-5">Instrucciones para agregar tu firma en Outlook</h1>
-        <p class="lead">Sigue los pasos a continuación para configurar tu firma personalizada en el cliente de correo electrónico.</p>
-    </div>
-
-    <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h4 class="card-title">Paso 1: Copiar tu firma</h4>
-            <p class="card-text">Primero, accede a tu firma personalizada y cópiala. Presiona el botón de abajo para ir a tu firma:</p>
-            <button class="btn btn-primary btn-custom" onclick="redirigir()">Ver mi firma</button>
+    <!-- Contenedor del encabezado -->
+    <header class="bg-light py-3">
+        <div class="container text-center">
+            <h5 class="mb-3">Ir a tu firma</h5>
+            <div class="btn-group" role="group">
+                <a class="btn custom-btn mx-1" href="firmas/arnau-alvarez.html" target="_blank">Arnau Álvarez</a>
+                <a class="btn custom-btn mx-1" href="firmas/edgar-quirante.html" target="_blank">Edgar Quirante</a>
+                <a class="btn custom-btn mx-1" href="firmas/mariano-lorenzo.html" target="_blank">Mariano Lorenzo</a>
+                <a class="btn custom-btn mx-1" href="firmas/salva-alvarez.html" target="_blank">Salva Álvarez</a>
+            </div>
         </div>
+    </header>
+
+    <!-- Contenido principal del tutorial -->
+    <div class="container mt-5">
+        <h1 class="text-center">Añadir Firma en Outlook</h1>
+        <hr>
+
+        <h2 class="mt-4">Copiar Firma</h2>
+        <ol>
+            <li>Haz click en el botón de arriba.</li>
+            <li>Selecciona todo el contenido (teclas ctrl + a).</li>
+            <li>Copia la firma en el portapapeles (teclas ctrl + c).</li>
+            <li>Sigue los siguientes pasos.</li>
+        </ol>
+
+        <h2 class="mt-4">Para Windows</h2>
+        <ol>
+            <li>Abre Outlook y selecciona "Archivo".</li>
+            <li>Haz clic en "Opciones" y luego selecciona "Correo".</li>
+            <li>Selecciona "Firmas" para abrir la ventana de firmas.</li>
+            <li>Crea una nueva firma y pégala en el cuadro de texto (teclas ctrl + v).</li>
+            <li>Haz clic en "Aceptar" para guardar los cambios.</li>
+        </ol>
+
+        <h2 class="mt-4">Para Mac</h2>
+        <ol>
+            <li>Abre Outlook y selecciona "Outlook" en la barra de menú.</li>
+            <li>Elige "Preferencias" y luego haz clic en "Firmas".</li>
+            <li>Crea una nueva firma y pégala en el cuadro de texto (teclas ctrl + v).</li>
+            <li>Configura la firma para que se use de forma predeterminada en los correos.</li>
+            <li>Haz clic en "Aceptar" para guardar los cambios.</li>
+        </ol>
+
+        <!-- Botón sin función por ahora 
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-secondary btn-lg" disabled>Botón sin función</button>
+        </div>-->
     </div>
 
-    <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h4 class="card-title">Paso 2: Abrir configuración de firma en Outlook</h4>
-            <p class="card-text">Abre Outlook y sigue estos pasos:</p>
-            <ol>
-                <li>Haz clic en <strong>Archivo</strong> en la barra de menú superior.</li>
-                <li>Selecciona <strong>Opciones</strong> en el menú desplegable.</li>
-                <li>Haz clic en <strong>Correo</strong> en el menú lateral izquierdo.</li>
-                <li>En el área de <strong>Firmas</strong>, selecciona <strong>Firmas y Plantillas</strong>.</li>
-            </ol>
-        </div>
-    </div>
-
-    <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h4 class="card-title">Paso 3: Pegar la firma</h4>
-            <p class="card-text">En la ventana de firmas, pega tu firma copiada en el cuadro de firma, y configura las demás opciones a tu gusto.</p>
-        </div>
-    </div>
-
-    <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h4 class="card-title">Otros clientes de correo</h4>
-            <p class="card-text">Si usas un cliente de correo diferente, como Gmail o Thunderbird, busca las opciones de "Firma" en la configuración y sigue los pasos similares para pegar tu firma.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<script>
-    function redirigir() {
-        // Obtener los parámetros de la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const usuario = urlParams.get('usuario');  // Obtener el valor del parámetro 'usuario'
-
-        // Comprobar el valor del parámetro y redirigir a la página correcta
-        if (usuario === 'edgar') {
-            window.location.href = 'usuarios/edgar-quirante.html';
-        } else if (usuario === 'salva') {
-            window.location.href = 'usuarios/salva-alvarez.html';
-        } else if (usuario === 'arnau') {
-            window.location.href = 'usuarios/arnau-alvarez.html';
-        } else {
-            alert('Usuario no encontrado');
-        }
-    }
-</script>
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
